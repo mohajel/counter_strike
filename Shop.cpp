@@ -3,12 +3,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <iomanip>
-#include <stdexcept>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <memory>
 
 #include "Shop.hpp"
 #include "Error.hpp"
@@ -26,7 +20,6 @@ Shop::Shop()
 				{"pistol", 400, 20, 200},
 				{"knife", 0, 35, 500}
 			};
-
 }
 
 Weapon Shop::find_weapon(string weapon_name)

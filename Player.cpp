@@ -3,12 +3,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <iomanip>
-#include <stdexcept>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <memory>
 
 #include "Player.hpp"
 #include "Shop.hpp"
@@ -41,7 +35,6 @@ void Player::print_your_status()
 	cout << this->deaths << " ";
 	cout << endl;
 }
-
 
 void Player::add_money(int amount)
 {
@@ -86,7 +79,6 @@ bool Player::is_winner(std::string winner_group)
 	return false;
 }
 
-
 bool Player::has_this_weapon(std::string weapon_name)
 {
 	return (find_weapon(weapon_name) == DONT_HAVE_THIS_WEAPON) ? false : true;
@@ -104,7 +96,6 @@ void Player::add_weapon(Weapon weapon)
 {
 	weapons.push_back(weapon);
 }
-
 
 void Player::shoot(Player* attacked, string weapon_name)
 {

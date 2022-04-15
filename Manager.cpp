@@ -3,25 +3,17 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <iomanip>
-#include <stdexcept>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <memory>
 #include <algorithm>
 
 #include "Manager.hpp"
 #include "Error.hpp"
 #include "Player.hpp"
 
-
 using namespace std;
 
 #define PLAYER_NOT_FOUND NULL
 #define WINNERS_MONEY 2700
 #define LOOSERS_MONEY 2400
-
 
 bool players_priority(Player* a, Player* b)
 {
@@ -59,8 +51,6 @@ void Manager::add_user()
 
 void Manager::handle_round()
 {
-
-
 	int num_of_commands;
 	string command;
 	cin >> num_of_commands;
@@ -128,7 +118,6 @@ void Manager::handle_round_command(string command)
 	else
 		cout << "unrecognized command in this round" << endl;
 }
-
 
 void Manager::start_command()
 {
@@ -205,7 +194,6 @@ void Manager::buy_command()
 	cout << "weapon bought successfully" << endl;
 }
 
-	
 void Manager::print_score_board()
 {
 	sort(players.begin(), players.end(), players_priority);
@@ -219,10 +207,6 @@ void Manager::print_score_board()
 		if (terrorist->is_terrorist())
 			terrorist->print_your_status();
 }
-
-
-
-
 
 Player* Manager::find_player(string name)
 {

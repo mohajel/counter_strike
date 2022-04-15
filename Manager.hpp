@@ -4,12 +4,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <iomanip>
-#include <stdexcept>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <memory>
 
 #include "Player.hpp"
 
@@ -36,8 +30,6 @@ public:
 	void buy_command();
 
 	void finish_round();
-
-
 
 private:
 	bool start;
