@@ -115,6 +115,8 @@ void Manager::handle_round_command(string command)
 		shoot_command();
 	else if (command == "buy")
 		buy_command();
+	else if (command == "score-board")
+		print_score_board();
 	else
 		cout << "unrecognized command in this round" << endl;
 }
